@@ -1,1 +1,1 @@
-test ansible_host = 3.88.90.155 ansible_ssh_private_key_file = /home/sainath/Downloads/test.pem
+test ansible_host=3.88.90.155 ansible_ssh_private_key_file=/home/sainath/Downloads/test.pem
