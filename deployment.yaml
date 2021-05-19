@@ -11,7 +11,7 @@
 #         state: stopped
 
     - name: tomcat stop
-      shell: systemctl stop tomcat 
+      shell: /opt/tomcat/bin/shutdown.sh
       
     - name: delete old war
       file: 
