@@ -1,15 +1,18 @@
 ---
 - hosts: test
   gather_facts: False
-  remote_user: root
+  remote_user: ubuntu
   become_method: sudo 
   
   tasks:
-    - name: tomcat stop
-      service: 
-        name: tomcat
-        state: stopped
+#     - name: tomcat stop
+#       service: 
+#         name: tomcat
+#         state: stopped
 
+    - name: tomcat stop
+      shell: systemctl start tomcat 
+      
     - name: delete old war
       file: 
         path: /opt/tomcat/webapps/*
