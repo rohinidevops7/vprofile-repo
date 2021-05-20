@@ -21,7 +21,7 @@
         
     - name: copying war file
       copy: 
-        src: /var/lib/jenkins/workspace/java-Build/target/vprofile-v1.war
+        src: ./target/vprofile-v1.war
         dest: /opt/tomcat/webapps
         
     - name: tomcat start
