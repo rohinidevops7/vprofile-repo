@@ -2,12 +2,12 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "nginx-1"
+  name: "nginx-123"
   namespace: "default"
   labels:
     app: "nginx-1"
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: "nginx-1"
