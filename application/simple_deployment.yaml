@@ -1,19 +1,21 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
-  name: helloworld-deployment
+  name: frontend
+  labels:
+    app: mywebsite
+    tier: frontend
 spec:
-  selector:
-    matchLabels:
-      app: helloworld
-  minReadySeconds: 5
+  replicas: 4
   template:
     metadata:
+      name: myapp-pod
       labels:
-        app: helloworld
+        app: myapp
     spec:
       containers:
-      - name: helloworld
-        image: hello-world:latest
-        ports:
-        - containerPort: 80
+        - name: helloworld
+          image: hello-world:latest
+  selector:
+    matchLabels:
+      app: myapp
