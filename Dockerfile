@@ -1,4 +1,3 @@
-FROM tomcat:8.0
-COPY target/vprofile-v1.war /usr/local/tomcat/webapps/
-EXPOSE 8080
+FROM bitnami/tomcat:9.0
+COPY target/vprofile-v1.war /opt/bitnami/tomcat/webapps_default
 
