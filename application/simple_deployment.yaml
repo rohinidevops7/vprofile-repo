@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: "nginx-1"
-        image: "dockervpnew12"
+        image: "dockervpnew12:latest"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
