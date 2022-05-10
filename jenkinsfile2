@@ -14,14 +14,7 @@ pipeline {
                   sh 'docker build -t realtime .'
                 }
             
-               } 
-        stage('Docker tag') {
-            steps {
-                  sh 'docker tag realtime newtag .'
-            }
-        }
-
-
+               }
      }
      
 }
