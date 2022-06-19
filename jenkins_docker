@@ -22,14 +22,14 @@ pipeline {
                }        
         stage('Docker tag') {
             steps {
-                  sh 'docker tag realtime:latest 573806717853.dkr.ecr.us-east-1.amazonaws.com/realtime:latest'
+                  sh 'docker tag realtime:latest 573806717853.dkr.ecr.us-east-1.amazonaws.com/docker:latest'
                 }
             
                } 
 
         stage('Docker push') {
             steps {
-                  sh 'docker push 573806717853.dkr.ecr.us-east-1.amazonaws.com/realtime:latest'
+                  sh 'docker push 573806717853.dkr.ecr.us-east-1.amazonaws.com/docker:latest'
                 }
             
                }        
