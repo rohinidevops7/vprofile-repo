@@ -16,20 +16,20 @@ pipeline {
 
         stage('Docker login') {
             steps {
-                  sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 573806717853.dkr.ecr.us-east-1.amazonaws.com'
+                  sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/l8o7b7t9'
                 }
             
                }        
         stage('Docker tag') {
             steps {
-                  sh 'docker tag docker-registry:latest 573806717853.dkr.ecr.us-east-1.amazonaws.com/docker-registry:latest'
+                  sh 'docker tag docker-repo:latest public.ecr.aws/l8o7b7t9/docker-repo:latest'
                 }
             
                } 
 
         stage('Docker push') {
             steps {
-                  sh 'docker push 573806717853.dkr.ecr.us-east-1.amazonaws.com/docker-registry:latest'
+                  sh 'docker push public.ecr.aws/l8o7b7t9/docker-repo:latest'
                 }
             
                }        
